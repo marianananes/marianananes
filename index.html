@@ -371,6 +371,24 @@ footer { background: var(--text); color: rgba(255,255,255,0.4); padding: 32px 8%
 }
 
 </style>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1407521404517247');
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1407521404517247&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -666,6 +684,15 @@ footer { background: var(--text); color: rgba(255,255,255,0.4); padding: 32px 8%
 <a href="https://api.whatsapp.com/send?phone=5511988180716&text=Ol%C3%A1%20Mariana%2C%20gostaria%20de%20agendar%20minha%20consulta." class="wa-float" target="_blank" title="Fale pelo WhatsApp">
   <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.996l6.305-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.867 0-3.614-.487-5.13-1.337l-.366-.218-3.793.995 1.012-3.694-.239-.381A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
-
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var whatsappLinks = document.querySelectorAll('a[href*="api.whatsapp.com"], a[href*="wa.me"]');
+    whatsappLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        fbq('track', 'Contact');
+      });
+    });
+  });
+</script>
 </body>
 </html>
